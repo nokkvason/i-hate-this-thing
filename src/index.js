@@ -16,7 +16,7 @@ client.on("ready", (c) => {
 })
 
 client.on("messageCreate", (message) => {
-  if(words.some(word => message.content.includes(word))) { 
+  if(words.some(word => message.content.toLowerCase().includes(word))) { 
     message.reply("ayo??? :flushed:")
   }
 })
