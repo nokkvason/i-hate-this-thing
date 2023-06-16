@@ -9,7 +9,7 @@ const client = new Client({
   ]
 })
 
-let words = [" come ", " came ", " coming "]
+let words = ["come", "came", "coming"]
 
 client.on("ready", (c) => {
   console.log(`${c.user.tag} ready`)
