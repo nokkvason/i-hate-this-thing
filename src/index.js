@@ -9,14 +9,14 @@ const client = new Client({
   ]
 })
 
-let words = ["come", "came", "coming"]
+let words = ["come", "came", "coming", "comes"]
 
 client.on("ready", (c) => {
   console.log(`${c.user.tag} ready`)
 })
 
 client.on("messageCreate", (message) => {
-  if (words.some(word => message.content.toLowerCase().includes(word))) {
+  if (words.some(word => message.content.toLowerCase().split(" ").includes(word))) {
     message.reply("ayo??? :flushed:")
   }
 })
